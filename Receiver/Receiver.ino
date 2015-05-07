@@ -24,10 +24,11 @@ Servo servo;
  
 void setup()
 {
+  //This starts the PC serial connection
   Serial.begin(9600);
+  //This starts the serial connection with the other Arduino
   ReceivePort.begin(4800);
   Serial.println("This is the Sorter Arm!");
-  // set the speed of the motor to 30 RPMs
   stepper.setSpeed(SPEED);
   servo.attach(SERVOPIN);
   
